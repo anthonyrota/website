@@ -286,17 +286,30 @@
       </main>
     </div>
     <script>
-      const PAGE_LIGHT_THEME = 0;
-      const PAGE_DARK_THEME = 1;
+      const PAGE_LIGHT_THEME = 'light';
+      const PAGE_DARK_THEME = 'dark';
+      const themeKey = 'theme';
+      function loadTheme() {
+        const theme = localStorage.getItem(themeKey);
+        if (theme === PAGE_LIGHT_THEME || theme === PAGE_DARK_THEME) {
+          return theme;
+        }
+        return null;
+      }
+      function storeTheme(theme) {
+        try {
+          localStorage.setItem(themeKey, theme);
+        } catch {}
+      }
       const PAGE_LIGHT_THEME_CLASS = 'page--light';
       const PAGE_DARK_THEME_CLASS = 'page--dark';
-      let theme = PAGE_LIGHT_THEME;
+      let theme = loadTheme() ?? PAGE_LIGHT_THEME;
       const pageElement = document.getElementById('page');
       const themeButton = document.getElementById('theme-button');
-      pageElement.classList.add(PAGE_LIGHT_THEME_CLASS);
+      pageElement.classList.add(theme === PAGE_LIGHT_THEME ? PAGE_LIGHT_THEME_CLASS : PAGE_DARK_THEME_CLASS);
       function toggleTheme() {
         if (theme === PAGE_LIGHT_THEME) {
-          theme = PAGE_DARK_THEME_CLASS;
+          theme = PAGE_DARK_THEME;
           pageElement.classList.remove(PAGE_LIGHT_THEME_CLASS);
           pageElement.classList.add(PAGE_DARK_THEME_CLASS);
         } else {
@@ -304,6 +317,7 @@
           pageElement.classList.remove(PAGE_DARK_THEME_CLASS);
           pageElement.classList.add(PAGE_LIGHT_THEME_CLASS);
         }
+        storeTheme(theme);
       }
       themeButton.addEventListener('click', toggleTheme);
     </script>
