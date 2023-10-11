@@ -72,11 +72,11 @@
         --border: 1px solid #eaeaea;
       }
       .page--dark {
-        --main-bg-color: #000;
+        --main-bg-color: #222427;
         --main-text-color: #fff;
-        --light-text-accent-color: #ccc;
-        --main-hover-bg-color: #333;
-        --border: 1px solid #333;
+        --light-text-accent-color: #ddd;
+        --main-hover-bg-color: #434343;
+        --border: 1px solid #434343;
       }
       .page--light .header__dark-icon {
         display: none;
@@ -160,6 +160,9 @@
         flex: 1 1 300px;
         width: 0;
       }
+      .page--dark .project__image--dark-border {
+        border: var(--border);
+      }
       .project__list {
         list-style-position: outside;
         padding-left: var(--padding-3);
@@ -227,7 +230,7 @@
                 <li class="project__list-item"><a class="project__link" href="https://github.com/anthonyrota/yetype">GitHub</a></li>
               </ul>
             </div>
-            <img src="yetype.png" alt="YeType website screenshot" class="project__image" />
+            <img src="yetype.png" alt="YeType website screenshot" class="project__image project__image--dark-border" />
           </div>
           <div class="project">
             <div class="project__text">
