@@ -175,6 +175,10 @@
         font-size: 0.85em;
         color: var(--light-text-accent-color);
       }
+      .project__link {
+        color: var(--light-text-accent-color);
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
@@ -212,31 +216,18 @@
           <div class="heading">Projects</div>
           <div class="project project--first">
             <div class="project__text">
-              <div class="project__description">Advanced WYSIWYG Text Editor</div>
-              <div class="project__sublabel">Tech: React, WebAssembly</div>
+              <div class="project__description">Full Stack Typing Test</div>
+              <div class="project__sublabel">Tech: React, Node, Postgres, Caddy, SendGrid, Docker, CI</div>
               <ul class="project__list">
-                <li class="project__list-item">Batched text deltas rendered in Vanilla JS</li>
-                <li class="project__list-item">Incremental search</li>
-                <li class="project__list-item">Spellcheck with Hunspell through Emscripten</li>
-                <li class="project__list-item">Multiple selections, composition handling</li>
-                <li class="project__list-item">Performant: Thousands of paragraphs and no lag</li>
-                <li class="project__list-item">State updates handled using reactive programming</li>
+                <li class="project__list-item">Replay typing tests taken in real time</li>
+                <li class="project__list-item">Authentication with email/password, email verification, profile management etc.</li>
+                <li class="project__list-item">See history of typing tests, and filter by time, words, or quote</li>
+                <li class="project__list-item">Deployed to DigitalOcean droplet using Docker images built with GitHub CI</li>
+                <li class="project__list-item">Caddy serves the static files and reverse proxies to the node server for API requests</li>
+                <li class="project__list-item"><a class="project__link" href="https://github.com/anthonyrota/yetype">GitHub</a></li>
               </ul>
             </div>
-            <img class="project__image" src="textEditor2.png" alt="Text editor screenshot" />
-          </div>
-          <div class="project">
-            <div class="project__text">
-              <div class="project__description">WYSIWYG Text Editor</div>
-              <div class="project__sublabel">Tech: React, Contenteditable</div>
-              <ul class="project__list">
-                <li class="project__list-item">Embeds: Image, table (& nested tables, code blocks in tables, etc.), code blocks</li>
-                <li class="project__list-item">Paragraphs: Heading, quote, list, alignment, indent</li>
-                <li class="project__list-item">Copy & Paste (& with html)</li>
-                <li class="project__list-item">Mobile support</li>
-              </ul>
-            </div>
-            <img class="project__image" src="textEditor1.png" alt="Text editor screenshot" />
+            <img src="yetype.png" alt="YeType website screenshot" class="project__image" />
           </div>
           <div class="project">
             <div class="project__text">
@@ -249,6 +240,7 @@
                 <li class="project__list-item">Seeded noise and simulated hydraulic erosion with water droplets</li>
                 <li class="project__list-item">Sky atmosphere shader, water</li>
                 <li class="project__list-item">Also have a version that renders with low-poly terrain and low-poly water</li>
+                <li class="project__list-item"><a class="project__link" href="https://github.com/anthonyrota/terrain">GitHub</a></li>
               </ul>
             </div>
             <img class="project__image" src="procTerrain1.png" alt="Procedurally generated terrain mountains with hydraulic erosion" />
@@ -263,6 +255,7 @@
                 <li class="project__list-item">Rendered using OpenGL</li>
                 <li class="project__list-item">Physics using Pymunk</li>
                 <li class="project__list-item">Sand pits, sticky walls, difficulty modes, sound, gui</li>
+                <li><a class="project__link" href="https://github.com/anthonyrota/golf">GitHub</a></li>
               </ul>
             </div>
             <img src="golfGame.png" alt="Golf game level" class="project__image" />
@@ -278,9 +271,25 @@
                 <li class="project__list-item">Also will render written markdown pages into the website</li>
                 <li class="project__list-item">Site-wide instant search done on the client</li>
                 <li class="project__list-item">Offline-first, accessibility, light/dark mode</li>
+                <li class="project__list-item"><a class="project__link" href="https://github.com/anthonyrota/microstream/tree/master/www">GitHub</a></li>
               </ul>
             </div>
             <img src="documentationGenerator.png" alt="Example generated documentation website" class="project__image" />
+          </div>
+          <div class="project">
+            <div class="project__text">
+              <div class="project__description">Advanced WYSIWYG Text Editor</div>
+              <div class="project__sublabel">Tech: React, WebAssembly</div>
+              <ul class="project__list">
+                <li class="project__list-item">Batched text deltas rendered in Vanilla JS</li>
+                <li class="project__list-item">Incremental search</li>
+                <li class="project__list-item">Spellcheck with Hunspell through Emscripten</li>
+                <li class="project__list-item">Multiple selections, composition handling</li>
+                <li class="project__list-item">Performant: Thousands of paragraphs and no lag</li>
+                <li class="project__list-item">State updates handled using reactive programming</li>
+              </ul>
+            </div>
+            <img class="project__image" src="textEditor2.png" alt="Text editor screenshot" />
           </div>
         </div>
       </main>
